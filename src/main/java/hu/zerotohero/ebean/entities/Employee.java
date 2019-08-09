@@ -58,6 +58,18 @@ public class Employee implements Serializable {
 	@ManyToOne(optional = false)
 	private Job job;
 
+	public Employee() {
+	}
+
+	public Employee(String firstName, String lastName, String email, String phoneNumber, Department department, Job job) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.phoneNumber = phoneNumber;
+		this.department = department;
+		this.job = job;
+	}
+
 	public Integer getId() {
 		return id;
 	}
